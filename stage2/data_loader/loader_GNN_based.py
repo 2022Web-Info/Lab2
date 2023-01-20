@@ -78,7 +78,7 @@ class DataLoader(DataLoaderBase):
 
         for row_ in self.kg_train_data.iterrows():
             h, r, t = row_[1]
-            self.train_kg_dict[h].append((t, r))
+            self.train_kg_dict[h].append((t, r))  # key为h, value为list(tuple(t, r))
             self.train_relation_dict[r].append((h, t))
 
 
